@@ -1,7 +1,8 @@
 import React from 'react'
 import { usePuterStore } from '~/lib/puter';
 import { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate ,Link} from 'react-router';
+import Navbar from '~/components/Navbar';
 export const meta =()=>([
     {title:"Resumemind|auth"},
     {name:"description", content:"Log into your account"}
@@ -20,6 +21,12 @@ const auth = () => {
   return (
       <main className="bg-[url('/images/bg-main.svg')] bg-cover min-h-screen flex items-center justify-center">
      <div className='gradient-border shadow-lg'>
+        <nav className="resume-nav">
+                <Link to="/" className="back-button">
+                    <img src="/icons/back.svg" alt="logo" className="w-2.5 h-2.5" />
+                    <span className="text-gray-800 text-sm font-semibold">Back to Homepage</span>
+                </Link>
+            </nav>
       <section className="flex flex-col gap-8 bg-white rounded-2xl p-10">
         <div className='flex flex-col gap-2 text-center'>
             <h1>

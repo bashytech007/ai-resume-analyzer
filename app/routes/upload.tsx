@@ -85,7 +85,7 @@ const Upload = () => {
                 return;
             }
 
-            console.log('✓ AI feedback received');
+            console.log('✓ AI feedback received',{ feedback });
 
             const feedbackText = typeof feedback.message.content === 'string'
                 ? feedback.message.content
