@@ -21,11 +21,14 @@ const auth = () => {
   return (
       <main className="bg-[url('/images/bg-main.svg')] bg-cover min-h-screen flex items-center justify-center">
      <div className='gradient-border shadow-lg'>
-        <nav className="resume-nav">
+        <nav className="resume-nav flex items-center justify-between">
                 <Link to="/" className="back-button">
                     <img src="/icons/back.svg" alt="logo" className="w-2.5 h-2.5" />
                     <span className="text-gray-800 text-sm font-semibold">Back to Homepage</span>
                 </Link>
+                  <Link to="/upload" className='primary-button w-fit'>
+                      Upload Resume
+                      </Link>
             </nav>
       <section className="flex flex-col gap-8 bg-white rounded-2xl p-10">
         <div className='flex flex-col gap-2 text-center'>
