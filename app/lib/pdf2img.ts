@@ -19,7 +19,7 @@ async function loadPdfJs(): Promise<any> {
 
     // @ts-ignore - pdfjs-dist type definitions issue
     loadPromise = import("pdfjs-dist/build/pdf.mjs").then((lib) => {
-        console.log("PDF.js library loaded");
+        // console.log("PDF.js library loaded");
         
         // Try multiple worker sources
         const workerSources = [
@@ -30,13 +30,13 @@ async function loadPdfJs(): Promise<any> {
         
         // Use the first worker source
         lib.GlobalWorkerOptions.workerSrc = workerSources[0];
-        console.log("Worker source set to:", lib.GlobalWorkerOptions.workerSrc);
+        // console.log("Worker source set to:", lib.GlobalWorkerOptions.workerSrc);
         
         pdfjsLib = lib;
         workerInitialized = true;
         return lib;
     }).catch(error => {
-        console.error("Failed to load PDF.js:", error);
+        // console.error("Failed to load PDF.js:", error);
         loadPromise = null;
         workerInitialized = false;
         throw error;

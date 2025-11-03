@@ -85,7 +85,7 @@ const Upload = () => {
                 return;
             }
 
-            console.log('✓ AI feedback received',{ feedback });
+            // console.log('✓ AI feedback received',{ feedback });
 
             const feedbackText = typeof feedback.message.content === 'string'
                 ? feedback.message.content
@@ -95,16 +95,16 @@ const Upload = () => {
             await kv.set(`resume:${uuid}`, JSON.stringify(data));
             
             setStatusText('Analysis complete! Redirecting...');
-            console.log('='.repeat(50));
-            console.log('📊 FINAL RESUME DATA:');
-            console.log('='.repeat(50));
-            console.log('ID:', data.id);
-            console.log('Company:', data.companyName);
-            console.log('Job Title:', data.jobTitle);
-            console.log('Resume Path:', data.resumePath);
-            console.log('Image Path:', data.imagePath);
-            console.log('Feedback:', data.feedback);
-            console.log('='.repeat(50));
+            // console.log('='.repeat(50));
+            // console.log('📊 FINAL RESUME DATA:');
+            // console.log('='.repeat(50));
+            // console.log('ID:', data.id);
+            // console.log('Company:', data.companyName);
+            // console.log('Job Title:', data.jobTitle);
+            // console.log('Resume Path:', data.resumePath);
+            // console.log('Image Path:', data.imagePath);
+            // console.log('Feedback:', data.feedback);
+            // console.log('='.repeat(50));
             
             setTimeout(() => {
                 navigate(`/resume/${uuid}`);
